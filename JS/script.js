@@ -34,14 +34,23 @@ function runtime(){
 }
 
 
+// isme hmne perent pr event lagaya hai, pr kyo?
+
+// iska javab hai ek concept kisko kehte hai perent event listener concept.
+// isme hm perent element pr event listener lagate hai aur "details.target" ki madad se un elements ko access krenge jinpr event chalega.
+// vrna hme total 168 eventlisteners lagane pdenge
+// "details.target.innerHTML" se hm uske andr ke text ko access krenge pr vo ek string hoga number nhi
+// usko Number() function se number me convert krke execute krna
+
+
 
 const play_game = ()=>{
     console.log(document.querySelector(".play_space").addEventListener('click',(details)=>{
         if(Number(details.target.innerHTML)===hittern){
             score += 10;
             document.querySelector(".scr").innerHTML = `${score}`;
-            createElem();
-            hitter();
+            createElem(); // isse elements baar baar refresh honge hr click ke baad
+            hitter(); // isse hit box refresh hoga
         }
         else {
             score -= 10;
