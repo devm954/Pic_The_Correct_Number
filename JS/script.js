@@ -28,7 +28,7 @@ function runtime(){
             }
             else{
                 clearInterval(timer);
-                document.querySelector(".play_space").innerHTML = "<h1>Game Over</h1>"
+                document.querySelector(".play_space").innerHTML = `<h1>Game Over</h1> <h1>Your score is ${score}</h1>`
             }
     },1000)
 }
